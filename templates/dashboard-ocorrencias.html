@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard de Ocorrências - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/menu.css" />
+    <link rel="stylesheet" href="/static/css/dashboard.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/auth.js" defer></script>
+    <script src="/static/js/dashboard-ocorrencias.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Dashboard de Ocorrências</h1>
+        <div class="buttons">
+          <button id="btn-home"><i class="fa-solid fa-house"></i> Home</button>
+          <button id="btn-backward">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+          </button>
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="dashboard-container">
+        <h2>Visão Geral</h2>
+
+        <div class="cards-grid">
+          <div class="card resumo" id="card-ativas">Ativas: --</div>
+          <div class="card resumo" id="card-aguardando">Aguardando: --</div>
+          <div class="card resumo" id="card-atendimento">Em Atendimento: --</div>
+          <div class="card resumo" id="card-resolvidas">Resolvidas: --</div>
+          <div class="card resumo" id="card-encerradas">Encerradas s/ Solução: --</div>
+          <div class="card resumo" id="card-fechadas">Fechadas: --</div>
+        </div>
+
+        <div class="graficos">
+          <div class="grafico-card">
+            <h3>Ocorrências por Categoria</h3>
+            <canvas id="grafico-categorias"></canvas>
+            <div id="sem-dados-categorias" class="sem-dados" style="display: none;">
+              Nenhuma ocorrência por categoria encontrada
+            </div>
+          </div>
+
+          <div class="grafico-card">
+            <h3>Ocorrências por Tipo</h3>
+            <canvas id="grafico-tipos"></canvas>
+            <div id="sem-dados-tipos" class="sem-dados" style="display: none;">
+              Nenhuma ocorrência por tipo encontrada
+            </div>
+          </div>
+
+          <div class="grafico-card">
+            <h3>Ocorrências por Turma</h3>
+            <canvas id="grafico-turmas"></canvas>
+            <div id="sem-dados-turmas" class="sem-dados" style="display: none;">
+              Nenhuma ocorrência por turma encontrada
+            </div>
+          </div>
+          
+          <div class="grafico-card">
+            <h3>Ocorrências por Aluno</h3>
+            <canvas id="grafico-alunos"></canvas>
+            <div id="sem-dados-alunos" class="sem-dados" style="display: none;">
+              Nenhuma ocorrência por aluno encontrada
+            </div>
+          </div>
+        </div>
+
+        <p id="mensagem-retorno" class="mensagem"></p>
+      </div>
+    </main>
+  </body>
+</html>

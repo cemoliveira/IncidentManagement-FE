@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cadastrar Usuário - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/form.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    
+    <script src="/static/js/auth.js" defer></script>
+    <script src="/static/js/cadastro-usuario.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Cadastrar Usuário</h1>
+        <div class="buttons">
+          <button id="btn-home"><i class="fa-solid fa-house"></i> Home</button>
+          <button id="btn-backward">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+          </button>
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>Formulário de Cadastro</h2>
+        <form id="form-cadastro">
+          <div class="input-group">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="input-group">
+            <label for="login">E-mail (Login)</label>
+            <input type="email" id="login" name="login" required />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="6"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="role">Papel (Função)</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Selecione</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-enviar">
+            <i class="fa-solid fa-user-plus"></i> Cadastrar
+          </button>
+        </form>
+
+        <p id="mensagem-retorno" class="mensagem"></p>
+      </div>
+    </main>
+  </body>
+</html>

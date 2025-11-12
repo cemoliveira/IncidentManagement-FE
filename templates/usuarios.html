@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Usuários - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/menu.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="/static/js/auth.js" defer></script>
+    <script src="/static/js/usuarios.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Usuários</h1>
+        <div class="buttons">
+          <button id="btn-home"><i class="fa-solid fa-house"></i> Home</button>
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-home">
+        <h2>Ações de Usuários</h2>
+        <div class="cards-container">
+          <div class="card" onclick="cadastrarUsuario()">
+            <i class="fa-solid fa-user-plus fa-3x"></i>
+            <h3>Cadastrar Usuário</h3>
+          </div>
+          <div class="card" onclick="alterarSenha()">
+            <i class="fa-solid fa-key fa-3x"></i>
+            <h3>Alterar Senha</h3>
+          </div>
+          <div class="card" onclick="listarUsuarios()">
+            <i class="fa-solid fa-list fa-3x"></i>
+            <h3>Listar Usuários</h3>
+          </div>
+          <div class="card" onclick="consultarUsuario()">
+            <i class="fa-solid fa-search fa-3x"></i>
+            <h3>Consultar Dados</h3>
+          </div>
+          <div class="card" onclick="atualizarPerfil()">
+            <i class="fa-solid fa-id-badge fa-3x"></i>
+            <h3>Atualizar Perfil</h3>
+          </div>
+          <div class="card" onclick="atualizarUsuario()">
+            <i class="fa-solid fa-pen-to-square fa-3x"></i>
+            <h3>Atualizar Usuário</h3>
+          </div>
+          <div class="card" onclick="excluirUsuario()">
+            <i class="fa-solid fa-user-minus fa-3x"></i>
+            <h3>Excluir Usuário</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ff2770, #45f3ff);
+    box-shadow: 0 5px 20px #00000080;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+header .buttons button {
+    padding: 10px 20px;
+    background: #000000aa;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+header .buttons button:hover {
+    background: #ff2770;
+    border-color: #ff2770;
+    box-shadow: 0 0 10px #ff2770, 0 0 40px #ff2770;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.consulta-container {
+    background: #00000033;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: inset 0 5px 15px #00000080, 0 5px 20px #00000080;
+    text-align: center;
+}
+
+.consulta-container h2 {
+    color: #45f3ff;
+    margin-bottom: 20px;
+}
+
+.form-busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-busca input {
+    padding: 10px 15px;
+    border: 2px solid #45f3ff;
+    border-radius: 30px;
+    background: #000000aa;
+    color: #fff;
+    width: 200px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-busca input:focus {
+    box-shadow: 0 0 10px #45f3ff;
+}
+
+.form-busca button {
+    padding: 10px 20px;
+    border: 2px solid #45f3ff;
+    border-radius: 30px;
+    background: #000000aa;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.form-busca button:hover {
+    background: #45f3ff;
+    color: #000;
+    box-shadow: 0 0 10px #45f3ff;
+}
+
+.resultado-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.resultado-card .card {
+    background: linear-gradient(135deg, #000000bb, #1a1a1a);
+    border: 2px solid #45f3ff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 0 15px #45f3ff44;
+    max-width: 400px;
+    width: 100%;
+    animation: aparecer 0.6s ease-in-out;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #45f3ff;
+    margin-bottom: 15px;
+}
+
+.card-header i {
+    font-size: 1.5em;
+}
+
+.card-body p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    text-align: left;
+    color: #fff;
+}
+
+.card-body strong {
+    color: #45f3ff;
+}
+
+.card-body p strong {
+    width: 120px;
+    display: inline-block;
+}
+
+.foto-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.foto-container img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 15px;
+    border: 2px solid #45f3ff;
+    box-shadow: 0 0 10px #45f3ff44;
+    object-fit: cover;
+}
+
+.vazio {
+    color: #ff2770;
+    font-weight: 500;
+}
+
+.mensagem {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.mensagem.sucesso {
+    color: #45f3ff;
+}
+
+.mensagem.erro {
+    color: #ff2770;
+}
+
+.card-footer button {
+  padding: 10px 20px;
+  border: 2px solid #45f3ff;
+  border-radius: 30px;
+  background: #000000aa;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card-footer button:hover {
+  background: #45f3ff;
+  color: #000;
+  box-shadow: 0 0 10px #45f3ff;
+}
+
+.card-footer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: #999;
+  color: #ccc;
+  background: #333;
+  box-shadow: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .consulta-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-busca {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .usuario-card .card {
+        padding: 20px;
+    }
+}

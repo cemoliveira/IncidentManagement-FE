@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Listar Usuários - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/list.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="/static/js/auth.js" defer></script>
+    <script src="/static/js/listagem-usuarios.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Listar Usuários</h1>
+        <div class="buttons">
+          <button id="btn-home"><i class="fa-solid fa-house"></i> Home</button>
+          <button id="btn-backward">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+          </button>
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="table-container">
+        <div class="top-bar">
+          <h2>Usuários Cadastrados</h2>
+          <div class="ordenacao">
+            <label for="select-ordenacao">Ordenar por:</label>
+            <select id="select-ordenacao">
+              <option value="id">ID</option>
+              <option value="name">Nome</option>
+              <option value="role">Papel</option>
+            </select>
+          </div>
+        </div>
+
+        <table
+          id="tabela-usuarios"
+          data-tabela-usuarios
+          data-url="/users"
+          data-colunas="id,name,role"
+        >
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Papel</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="pagination">
+          <button id="btn-prev" disabled>⟨ Anterior</button>
+          <span id="pagina-info">Página 1</span>
+          <button id="btn-next" disabled>Próxima ⟩</button>
+        </div>
+
+        <p id="mensagem-retorno" class="mensagem"></p>
+      </div>
+    </main>
+  </body>
+</html>

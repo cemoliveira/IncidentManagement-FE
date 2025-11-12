@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/menu.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="/static/js/home.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Bem-vindo(a), <span id="usuario-logado"></span>!</h1>
+        <div class="buttons">
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-home">
+        <h2>Escolha uma seção:</h2>
+        <div class="cards-container">
+          <div class="card" onclick="navigateTo('ocorrencias.html')">
+            <i class="fa-solid fa-file-circle-plus fa-3x"></i>
+            <h3>Ocorrências</h3>
+          </div>
+          <div class="card" onclick="navigateTo('turmas.html')">
+            <i class="fa-solid fa-chalkboard-user fa-3x"></i>
+            <h3>Turmas</h3>
+          </div>
+          <div class="card" onclick="navigateTo('alunos.html')">
+            <i class="fa-solid fa-user-graduate fa-3x"></i>
+            <h3>Alunos</h3>
+          </div>
+          <div class="card" onclick="navigateTo('usuarios.html')">
+            <i class="fa-solid fa-users fa-3x"></i>
+            <h3>Usuários</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

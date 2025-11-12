@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ff2770, #45f3ff);
+    box-shadow: 0 5px 20px #00000080;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+header .buttons button {
+    padding: 10px 20px;
+    background: #000000aa;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+header .buttons button:hover {
+    background: #ff2770;
+    border-color: #ff2770;
+    box-shadow: 0 0 10px #ff2770, 0 0 40px #ff2770;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background: #00000033;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: inset 0 5px 15px #00000080, 0 5px 20px #00000080;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #45f3ff;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #45f3ff;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 10px;
+    border: 1px solid #45f3ff;
+    border-radius: 10px;
+    background: #00000088;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #ff2770;
+    box-shadow: 0 0 10px #ff2770;
+    outline: none;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px solid #45f3ff;
+    background: transparent;
+    color: #45f3ff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-enviar:hover {
+    background: #45f3ff;
+    color: #000;
+    box-shadow: 0 0 15px #45f3ff;
+}
+
+.mensagem {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.mensagem.sucesso {
+    color: #45f3ff;
+}
+
+.mensagem.erro {
+    color: #ff2770;
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

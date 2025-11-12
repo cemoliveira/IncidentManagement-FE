@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ff2770, #45f3ff);
+    box-shadow: 0 5px 20px #00000080;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+header .buttons button {
+    padding: 10px 20px;
+    background: #000000aa;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+header .buttons button:hover {
+    background: #ff2770;
+    border-color: #ff2770;
+    box-shadow: 0 0 10px #ff2770, 0 0 40px #ff2770;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.menu-home {
+    max-width: 1400px;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-home h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: #45f3ff;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.card {
+    background: #00000033;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: inset 0 5px 15px #00000080, 0 5px 20px #00000080;
+}
+
+.card i {
+    margin-bottom: 15px;
+    color: #ff2770;
+    text-shadow: 0 0 5px #ff2770, 0 0 20px #ff2770;
+    transition: 0.5s;
+}
+
+.card h3 {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.card:hover {
+    background: #00000055;
+    transform: translateY(-10px);
+    border-color: #45f3ff;
+    box-shadow: 0 0 20px #45f3ff, inset 0 5px 15px #000000aa;
+}
+
+.card:hover i {
+    color: #45f3ff;
+    text-shadow: 0 0 10px #45f3ff, 0 0 30px #45f3ff;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cards-container {
+        gap: 20px;
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1em;
+    }
+}

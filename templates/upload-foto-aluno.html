@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Enviar Foto do Aluno - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/form.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="/static/js/auth.js" defer></script>
+    <script src="/static/js/upload-foto-aluno.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Enviar Foto do Aluno</h1>
+        <div class="buttons">
+          <button id="btn-home"><i class="fa-solid fa-house"></i> Home</button>
+          <button id="btn-backward">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+          </button>
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>Upload de Foto</h2>
+        <form id="form-upload-foto" enctype="multipart/form-data">
+          <div class="input-group">
+            <label for="id">ID do Aluno</label>
+            <input type="number" id="id" name="id" required />
+          </div>
+
+          <div class="input-group">
+            <label for="image">Foto do Aluno</label>
+            <input type="file" id="image" name="image" accept="image/*" required />
+          </div>
+
+          <button type="submit" class="btn-enviar">
+            <i class="fa-solid fa-upload"></i> Enviar Foto
+          </button>
+        </form>
+
+        <p id="mensagem-retorno" class="mensagem"></p>
+
+        <div id="preview-container" style="margin-top: 20px; text-align: center;">
+          <img
+            id="preview"
+            src=""
+            alt="Pré-visualização da imagem"
+            style="max-width: 200px; display: none; border-radius: 10px;"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

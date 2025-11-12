@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Listar Ocorrências Não Resolvidas - Sistema Escolar</title>
+
+    <link rel="icon" href="/static/images/autismo-96.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/list.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="/static/js/auth.js" defer></script>
+    <script src="/static/js/listagem-ocorrencias.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Listar Ocorrências Não Resolvidas</h1>
+        <div class="buttons">
+          <button id="btn-home"><i class="fa-solid fa-house"></i> Home</button>
+          <button id="btn-backward">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+          </button>
+          <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="table-container">
+        <div class="top-bar">
+          <h2>Ocorrências Não Resolvidas</h2>
+          <div class="ordenacao">
+            <label for="select-ordenacao">Ordenar por:</label>
+            <select id="select-ordenacao">
+              <option value="id">ID</option>
+              <option value="schoolClass.name">Turma</option>
+              <option value="student.name">Aluno</option>
+              <option value="type">Tipo</option>
+              <option value="status">Status</option>
+            </select>
+          </div>
+        </div>
+
+        <table
+          id="tabela-ocorrencias-nao-resolvidas"
+          data-tabela-ocorrencias
+          data-url="/incidents/status/unsolved"
+          data-colunas="id,schoolClassName,studentName,type,description,status,updateDate"
+        >
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Turma</th>
+              <th>Aluno</th>
+              <th>Tipo</th>
+              <th>Descrição</th>
+              <th>Status</th>
+              <th>Data de Atualização</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="pagination">
+          <button id="btn-prev" disabled>⟨ Anterior</button>
+          <span id="pagina-info">Página 1</span>
+          <button id="btn-next" disabled>Próxima ⟩</button>
+        </div>
+
+        <p id="mensagem-retorno" class="mensagem"></p>
+      </div>
+    </main>
+  </body>
+</html>
